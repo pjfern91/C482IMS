@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPart">
+    <children>
+        <TextField fx:id="partIdField" disable="true" layoutX="150.0" layoutY="75.0" promptText="Auto-Generated">
+         <font>
+            <Font name="SansSerif Italic" size="12.0" />
+         </font></TextField>
+        <TextField fx:id="partNameField" layoutX="150.0" layoutY="125.0" />
+        <TextField fx:id="partStockField" layoutX="150.0" layoutY="175.0" />
+        <TextField fx:id="partPriceField" layoutX="150.0" layoutY="225.0" />
+        <TextField fx:id="partMaxField" layoutX="150.0" layoutY="275.0" prefHeight="25.0" prefWidth="83.0" />
+        <TextField fx:id="partMinField" layoutX="300.0" layoutY="275.0" prefWidth="83.0" />
+        <TextField fx:id="partMachineId" layoutX="150.0" layoutY="325.0" />
+        <RadioButton fx:id="inHousePart" layoutX="325.0" layoutY="25.0" mnemonicParsing="false" onAction="#radioSelection" text="In-House">
+            <font>
+                <Font name="SansSerif Regular" size="12.0" />
+            </font>
+            <toggleGroup>
+                <ToggleGroup fx:id="partSource" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="outsourcedPart" layoutX="450.0" layoutY="25.0" mnemonicParsing="false" onAction="#radioSelection" text="Outsourced" toggleGroup="$partSource">
+            <font>
+                <Font name="SansSerif Regular" size="12.0" />
+            </font>
+        </RadioButton>
+        <Button layoutX="440.0" layoutY="360.0" mnemonicParsing="false" onAction="#savePartButton" text="Save">
+            <font>
+                <Font name="SansSerif Regular" size="12.0" />
+            </font>
+        </Button>
+        <Button layoutX="500.0" layoutY="360.0" mnemonicParsing="false" onAction="#cancelButton" text="Cancel">
+            <font>
+                <Font name="SansSerif Regular" size="12.0" />
+            </font>
+        </Button>
+        <Label layoutX="75.0" layoutY="280.0" text="Max">
+            <font>
+                <Font name="SansSerif Regular" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="75.0" layoutY="80.0" text="Part ID">
+            <font>
+                <Font name="SansSerif Regular" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="75.0" layoutY="130.0" text="Name">
+            <font>
+                <Font name="SansSerif Regular" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="75.0" layoutY="180.0" text="In-Stock">
+            <font>
+                <Font name="SansSerif Regular" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="255.0" layoutY="280.0" text="Min">
+            <font>
+                <Font name="SansSerif Regular" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="changeLabel" layoutX="60.0" layoutY="330.0" text="Machine ID">
+            <font>
+                <Font name="SansSerif Regular" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="75.0" layoutY="230.0" text="Price">
+            <font>
+                <Font name="SansSerif Regular" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="70.0" layoutY="25.0" text="Add Part">
+            <font>
+                <Font name="SansSerif Bold Italic" size="18.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
